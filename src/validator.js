@@ -1,7 +1,7 @@
 const validator = {
   maskify: function (numeroValidar) {
     return numeroValidar.slice(0, -4).replace(/./g, '#') + numeroValidar.slice(-4);
-   // return '############' + numeroValidar.slice(-4);
+   // return '############### ' + numeroValidar.slice(-4);
     
   },
 
