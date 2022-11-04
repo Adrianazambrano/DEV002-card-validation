@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CardValidation </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ContainerPadre">
+        <header>
+            <div class="logo">
+              <h1>SMART BODY</h1>
+              <img src="img/sasf.png" alt="" width="60px" height="35px ">
+            </div>
+            
+            <nav>
+              <ul>
+                <li><a href="" class="navegacion">Membresia</a></li>
+                <li><a href="" class="navegacion" >Acerca de </a></li>
+                <li><a href="" class="navegacion">Contacto</a></li>
+              </ul>
+            </nav>
+          
+          
+        </header>
+
+        <main>
+
+          <p> <strong> Valida tu tarjeta de credito,</strong><br>para el pago mensual<br>
+            de tu membresia</p>
+
+              <form class="containerRegistro" id="formulario">
+                
+                <div class="containerDatos">
+                  <input type="text" class="registro" name="numero" id="numero" placeholder="Ingresa el numero de la tarjeta" >
+                  <p id="mensaje"></p>
+                 <input type="text" class="registro" name ="nombre" id="nombre" placeholder="Ingresa tu nombre" >
+              </div>
+              <input type="submit" value="Validar" id="botonValidar">
+              </form>
+
+              <div class="Tarjeta">
+                <img src="img/chip.png" alt="" width="45px" height="55px">
+                <input type="text" id="capturarNumero" disabled >
+               
+                <input type="text" id="capturarNombre" disabled>
+                       </div>          
+       
+             
+                      
+        </main>
+
+        <footer>
+          <p>Card Validation Prototype   Adriana Zambrano Caceres  2022 </p>
+
+          </footer>
+
+  </div>
+  
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
