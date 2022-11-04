@@ -21,13 +21,13 @@ usuario.addEventListener("keyup", (event) => {
 
 
 formulario.addEventListener('submit', (event) => {
-    event.preventDefault();
+    event.preventDefault();//prevenir el funcionamiento del formulario, y no recarge otra pagina 
     var numeroValidar = cardNumber.value;
 
-    // if(numeroValidar.value == null){
-    //     return alert('Ingresa numero de tarjeta')
+    //  if(numeroValidar == null){
+    //      return alert('Ingresa numero de tarjeta')
       
-    // } 
+    //  } 
    
     const validacion = validator.isValid(numeroValidar);
     const numeroOculto = validator.maskify(numeroValidar);
