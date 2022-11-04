@@ -1,24 +1,26 @@
 const validator = {
   maskify: function (numeroValidar) {
     return numeroValidar.slice(0, -4).replace(/./g, '#') + numeroValidar.slice(-4);
-   // return '############### ' + numeroValidar.slice(-4);
-    
+   
+
   },
 
   isValid: function (numeroValidar) {
+
+   
     //1. pasar los numeros a un array en orden inverso:
     var numeroInvertido = numeroValidar.toString().split('').reverse();
     numeroInvertido = numeroInvertido.map(numero => {
       return parseInt(numero)
     })
-    console.log('paso1', numeroInvertido)
+    //console.log('paso1', numeroInvertido)
     // 2. Operacion de posiciones pares:
     var pares = [];
     var impares = [];
     for (let i = 0; i < numeroInvertido.length; i++) {
-      console.log('index', i)
+      //console.log('index', i)
 
-      if ((i+1) % 2 == 0) {
+      if ((i + 1) % 2 == 0) {
         // multiplico el numero que este en la posicon par del array 
         var numeroDoble = numeroInvertido[i] * 2;
         // Descompongo el numero en dos cifras
@@ -53,23 +55,8 @@ const validator = {
 
     return suma % 10 == 0;
 
-
-
-
-
-
   }
 
-
-
-
 };
-
-// //validator.isValid(4095571174987314)
-// var hola = 4;
-// console.log(hola.toString().split(''))
-
-// console.log (validator.isValid(4095571174987314))
-
 
 export default validator;

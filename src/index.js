@@ -1,7 +1,5 @@
 
 
-//document.addEventListener('DOMContentLoaded', function () {
-
 import validator from './validator.js';
 
 console.log(validator);
@@ -11,32 +9,32 @@ var cardNumber = document.getElementById('numero');
 var usuario = document.getElementById('nombre');
 //console.log(cardNumber,usuario)
 
-// Capturar datos del formlario y mostrarlos en la tarjeta:
+// Capturar nombre de usuario del formlario y mostrarlo en la tarjeta:
 
-cardNumber.addEventListener("keyup", (event) => {
-    if (event.isComposing || event.keyCode === 229) {
-        return;
-    }
-    // document.getElementById("capturarNumero").value = cardNumber.value;
-
-});
 usuario.addEventListener("keyup", (event) => {
     if (event.isComposing || event.keyCode === 229) {
         return;
     }
     document.getElementById("capturarNombre").value = usuario.value;
 });
+// tomo los resultados de validator y aplico las condiciones :
+
 
 formulario.addEventListener('submit', (event) => {
     event.preventDefault();
     var numeroValidar = cardNumber.value;
 
+    // if(numeroValidar.value == null){
+    //     return alert('Ingresa numero de tarjeta')
+      
+    // } 
+   
     const validacion = validator.isValid(numeroValidar);
     const numeroOculto = validator.maskify(numeroValidar);
     document.getElementById("capturarNumero").value = numeroOculto;
 
 
-    if (validacion == true) {
+    if (validacion == true  ) {
         document.getElementById('mensaje').innerHTML = 'Numero de tarjeta valido';
         document.getElementById('mensaje').style.color = '#008000';
 
@@ -50,19 +48,11 @@ formulario.addEventListener('submit', (event) => {
 
     console.log(validacion, numeroOculto)
         ;
-//});
+} 
 
+    
 
-
-
-
-
-
-
-
-
-
-}, false);
+, false);
 
 
 
